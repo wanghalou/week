@@ -1,0 +1,33 @@
+[{
+        "tit": "MySQL",
+        "num": "60天",
+        "cpu": "2核CPU",
+        "nei": "4GB内存",
+        "xi": "40G系统盘",
+        "shuju": "100G数据盘"
+    },
+    {
+        "tit": "PostgreSQL",
+        "num": "60天",
+        "cpu": "2核CPU",
+        "nei": "4GB内存",
+        "xi": "40G系统盘",
+        "shuju": "100G数据盘"
+    },
+    {
+        "tit": "SQL Server",
+        "num": "60天",
+        "cpu": "2核CPU",
+        "nei": "4GB内存",
+        "xi": "40G系统盘",
+        "shuju": "100G数据盘"
+    },
+    {
+        "tit": "MongoDB",
+        "num": "60天",
+        "cpu": "2核CPU",
+        "nei": "4GB内存",
+        "xi": "40G系统盘",
+        "shuju": "100G数据盘"
+    }
+]

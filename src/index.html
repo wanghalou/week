@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="content">
+            <div class="header">
+                <h4>云数据库</h4>
+                <p>安全可靠的数据库服务，人气精选，轻松管理</p>
+            </div>
+            <div class="con">
+                <ul class="list">
+                    <li>
+                        <p><span>MySQL</span><b>60天</b></p>
+                        <div class="tit">
+                            <span>2核CPU</span>
+                            <span>4GB内存</span>
+                            <span>40G系统盘</span>
+                            <span>100G数据盘</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <script>
+        var list = document.querySelector('.list');
+        var li = document.querySelectorAll('li');
+        var xml = new XMLHttpRequest();
+        xml.onreadystatechange = function() {
+            if (xml.readyState === 4) {
+                if (xml.status === 200) {
+                    var data = JSON.parse(xml.responseText);
+                    render(data)
+                }
+            }
+        }
+        xml.open('get', './data/data.json');
+        xml.send();
+
+        function render(data) {
+            var html = '';
+            data.forEach(function(v) {
+                html += `
+                <li>
+                        <p><span>${v.tit}</span><b>${v.num}</b></p>
+                        <div class="tit">
+                            <span>${v.cpu}</span>
+                            <span>${v.nei}</span>
+                            <span>${v.xi}</span>
+                            <span>${v.shuju}</span>
+                        </div>
+                    </li>
+                
+                `;
+            })
+            list.innerHTML += html;
+        }
+        li.onclick = function() {
+            alert(0)
+        }
+    </script>
+</body>
+
+</html>
